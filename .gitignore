@@ -1,0 +1,12 @@
+# Entornos
+env/
+.venv/
+.env
+# Configuracion del editor
+.vscode/
+
+#Python
+__pycache__/
+
+#
+node_modules/

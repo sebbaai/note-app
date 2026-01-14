@@ -15,28 +15,40 @@
       <span>NOTE <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-160v-441q0-33 24-56t57-23h439q33 0 56.5 23.5T880-600v320L680-80H360q-33 0-56.5-23.5T280-160ZM81-710q-6-33 13-59.5t52-32.5l434-77q33-6 59.5 13t32.5 52l10 54h-82l-7-40-433 77 40 226v279q-16-9-27.5-24T158-276L81-710Zm279 110v440h280v-160h160v-280H360Zm220 220Z"/></svg></span>
     </header>
     <main class="main_section">
-      <div class="main_wrapper">
         <div class="main_container">
-          <div class="main_description_container">
+          <div class="main_text_container">
             <p class="main_p main_title">BIENVENIDO!</p>
             <p class="main_description">
-              <span>Note</span> te ayuda a capturar tus ideas y encontrarlas cuando las necesitás.<br>
-              Escribí, organizá y accedé a tus notas sin complicaciones.
+               Escriba, organice y acceda a sus notas sin complicaciones.<br>
             </p>
           </div>
-          <button class="main_button" onclick="location.href='#app'"><span>Empezar</span></button>
+          <button class="main_button" onclick="location.href='#form'"><span>Empezar</span></button>
         </div>
-      </div>
       <svg class="svg svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#000"><path d="M280-160v-441q0-33 24-56t57-23h439q33 0 56.5 23.5T880-600v320L680-80H360q-33 0-56.5-23.5T280-160ZM81-710q-6-33 13-59.5t52-32.5l434-77q33-6 59.5 13t32.5 52l10 54h-82l-7-40-433 77 40 226v279q-16-9-27.5-24T158-276L81-710Zm279 110v440h280v-160h160v-280H360Zm220 220Z"/></svg>
       <svg class="svg svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#000"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
     </main>
     <section id="app">
       <div class="app_wrapper">
-      <form>
-        <input type="text" id="input_name">
-        <input type="text" id="input_surname">
-        <input type="number" id="input_age">
-        <button id="button">enviar</button>
+      <form id="form">
+        <h2>Nueva nota</h2>
+        <div class="input_container">
+        <h4>Nombre de la tarea:</h4>
+        <input type="text" id="input_name" placeholder="Ordenar la habitacion...">
+        </div>
+        <div class="input_container">
+        <h4>Descripcion breve:</h4>
+        <textarea rows="4"></textarea>
+        </div>
+        <div class="input_container">
+        <h4>Realizar antes de la fecha:</h4>
+        <input type="date" id="input_age">
+        <div id="div_checkbox" class="input_container">
+        <input type="checkbox" id="input_checkbox">
+        <h4>Activar recordatorio</h4>
+        </div>
+        </div>
+  
+        <button id="button">Anotar</button>
       </form>
       </div>
     </section>

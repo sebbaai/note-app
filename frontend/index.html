@@ -13,10 +13,9 @@
   <body>
     <header class="header" id="header">
       <a href="#header"><h2 class="header_title">NOTE</h2></a>
-      
       <ul class="header_ul">
         <li>
-          <button>
+          <button onclick="location.href='#notes'" id="button_notelist">
           <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#e3e3e3">
             <path d="M120-240v-80h480v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
           </svg>
@@ -62,9 +61,12 @@
         <h4>Activar recordatorio</h4>
         </div>
         </div>
-  
         <button id="button_post_note" type="submit">Anotar</button>
       </form>
+      </div>
+    </section>
+    <section id="notes">
+      <div class="notes-wrapper" id="notes-wrapper">
       </div>
     </section>
     <script type="module" src="/src/main.js" defer></script>

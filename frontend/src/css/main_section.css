@@ -1,0 +1,93 @@
+.main_section{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.main_wrapper{
+    height: 100dvh;
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 0px 20px;
+}
+.main_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    background-color: var(--dark-bg);
+    box-shadow: 0 10px 20px rgba(0,0,0, .8);
+    padding: var(--pd-lg);
+    border-radius: var(--br-md);
+}
+.main_input_container{
+    margin-bottom: 20px;
+}
+.main_form_label{
+    font-size: .6rem;
+    color: var(--text-light-color);
+    font-weight: 500;
+    margin: var(--mg-sm);
+}
+textarea{
+    width: 100%;
+    border: 2px solid #ccc;
+    resize: none;
+    border-radius: var(--br-md);
+}
+.main_form_title{
+    font-size: 2rem;
+    color: var(--text-light-color);
+    border-bottom: 1px solid #333;
+    margin-bottom: var(--mg-md);
+}
+.main_form input{
+    width: 100%;
+    padding: var(--pd-sm);
+    border-radius: var(--br-sm);
+    border: 2px solid #bbb;
+}
+input[type="checkbox"]{
+    width: 20px;
+    transform: scale(1.20);     
+    margin: var(--mg-lg);
+}
+.main_form > button{
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--blue-bg);
+    border: none;
+    padding: var(--pd-sm) var(--pd-md);
+    border-radius: var(--br-sm);
+    color: var(--text-light-color);
+    transition: var(--transition);
+    margin: var(--mg-md);
+}
+input:focus, textarea:focus{
+    outline: none;
+    border: 2px solid var(--blue-bg);
+}
+.modal_positive{
+    width: fit-content;
+    height: fit-content;
+    padding: var(--pd-lg);
+    border-radius: var(--br-md);
+    color: #eaeaea;
+    background-color: #585;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+.modal_negative{
+     width: fit-content;
+    height: fit-content;
+    padding: var(--pd-lg);
+    border-radius: var(--br-md);
+    color: #eaeaea;
+    background-color: red;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}

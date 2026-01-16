@@ -1,0 +1,43 @@
+header{
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-bg);
+    position: fixed;
+    z-index: 4;
+    box-shadow: 0 0 5px 5px #0009;
+}
+header a{
+    text-decoration: none;
+    color: #eaeaea;
+}
+.header_title{
+    font-size: 2rem ;
+    letter-spacing: 2px;
+    font-style: oblique;
+}
+.header_ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header button {
+    background-color: transparent;
+    padding: var(--pd-sm);
+    border: none;
+    transition: all .4s;
+}
+header button:hover{
+    transform: scale(1.05);
+}
+header button:active{
+    transform: scale(0.95);
+}
+header svg{
+    width: 40px;
+    fill: #eaeaea;
+}

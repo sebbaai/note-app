@@ -11,9 +11,10 @@
     padding: 10px;
     background-color: var(--dark-bg);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 90dvw;
-    height: 80dvh;
+    height: 20dvh;
     border-radius: var(--br-md);
     box-shadow: 0 8px 16px var(--dark-bg);
     margin-bottom: 30px;

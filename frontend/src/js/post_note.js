@@ -5,6 +5,7 @@ export const postNote = async ()=>{
     let task_date = document.getElementById('input_task_date')
     let task_checkbox = document.getElementById('input_checkbox')
     const task = {
+        'id':  0,    
         'name': task_name.value.trim(),
         'description': task_description.value.trim(),
         'date': task_date.value,

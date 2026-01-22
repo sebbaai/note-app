@@ -4,6 +4,8 @@ Note app es una aplicacion web que permite crear y organizar notas de forma simp
 ## Funcionalidades actuales
 - Crear notas
 - Consultar notas
+- Modificar notas
+- Eliminar notas
 
 ## Tecnologias
 - Frontend: HTML, CSS, JS
@@ -11,6 +13,5 @@ Note app es una aplicacion web que permite crear y organizar notas de forma simp
 - Base de datos: Pendiente
 
 ## Pasos pendientes
-- Agregar la funcionalidad necesaria para editar y eliminar notas.
 - Listar tareas como completadas o pendientes.
 - Autenticacion y gestion de usuarios.

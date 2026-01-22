@@ -33,7 +33,7 @@ async def get() :
 @app.post('/tasks')
 async def users(task: Task) :
     tasks_list = readJson()
-    task.id = len(tasks_list) + 1
+    task.id = max(task['id'] for task in tasks_list) + 1
     tasks_list.append(dict(task))
     writeJson(tasks_list)
 
@@ -45,3 +45,15 @@ async def update_task(task_id: int, task: Task):
         if t['id'] == task_id:
             tasks_list[i] = dict(task)
             writeJson(tasks_list)
+
+@app.delete('/tasks/{task_id}')
+async def delete_task(task_id):
+    tasks_list = readJson()
+    for i, t in enumerate(tasks_list):
+        if t['id'] == int(task_id) :
+            del tasks_list[i]
+    writeJson(tasks_list)
+        
+
+
+

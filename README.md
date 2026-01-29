@@ -10,7 +10,7 @@ Note app es una aplicacion web que permite crear y organizar notas de forma simp
 ## Tecnologias
 - Frontend: HTML, CSS, JS
 - Backend: FastAPI
-- Base de datos: Pendiente
+- Base de datos: SQLite
 
 ## Pasos pendientes
 - Listar tareas como completadas o pendientes.

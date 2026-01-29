@@ -35,15 +35,7 @@ export const get_notes = async ()=>{
             div.append(h2,p1,p2, btn_checked, btn_update, btn_delete)
       notes_wrapper.append(div)
       btn_delete.addEventListener('click', async ()=>{
-                let response = await fetch(`http://127.0.0.1:8000/tasks/${n.id}`, {
-                    method: "DELETE"
-                })
-                if(!response.ok){
-                    console.log('Algo salio mal. Intentelo de nuevo porfavor.')
-                }else{
-                    console.log('Eliminado')
-                    console.log(n.id)
-                }
+                deleteNote(n.id)
                 })
             btn_update.addEventListener('click', async ()=>{
                 h2.replaceWith(input_h2)

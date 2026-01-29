@@ -1,16 +1,12 @@
 
-export const putNote = async (id, name, description, date, state, created_at, update_at)=>{
+export const putNote = async (id, name, description, date, remember, created_at, update_at)=>{
     const task = {
-        'id': id,
         'name': name,
         'description': description,
-        'date': date,
-        'state': state,
-        'created_at': created_at,
-        'update_at': update_at
+        'remember': remember,
     }
     let response = await fetch(`http://127.0.0.1:8000/tasks/${id}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(task)
     })

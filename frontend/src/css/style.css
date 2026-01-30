@@ -18,6 +18,7 @@ body{
 }
 :root{
     --dark-bg: #252525;
+    --light-dark-bg: #353535;
     --light-bg: #f5f1e1;
     --blue-bg: #3b82f6;
     --br-sm: 5px;

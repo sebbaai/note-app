@@ -4,14 +4,10 @@ export const postNote = async ()=>{
     let task_description = document.getElementById('input_task_description')
     let task_date = document.getElementById('input_task_date')
     let task_checkbox = document.getElementById('input_checkbox')
-    const task = {
-        'id':  0,    
+    const task = {   
         'name': task_name.value.trim(),
         'description': task_description.value.trim(),
-        'date': task_date.value,
-        'state': task_checkbox.checked,
-        'created_at': 'null',
-        'update_at': 'null'
+        'remember': task_checkbox.checked
     }
     try{
       let response = await fetch('http://127.0.0.1:8000/tasks',

@@ -2,27 +2,36 @@
     width: 100%;
     background-color: var(--light-bg);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll;
 }
 .div_notes{
     padding: 10px;
     background-color: var(--dark-bg);
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    width: 90dvw;
-    height: 20dvh;
+    align-items: center;
+    width: 40dvw;
+    height: 15dvh;
     border-radius: var(--br-md);
     box-shadow: 0 8px 16px var(--dark-bg);
-    margin-bottom: 30px;
+    margin: 20px;
     position: relative;
 }
 .div_notes > h2{
     color: var(--text-light-color);
     padding: var(--pd-md);
+}
+.div_notes > p{
+    width: 180px;
+    color: var(--text-light-color);
+    display: none;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-wrap: wrap;
+    text-overflow: ellipsis;
 }
 .btn_checked{
     width: 40px;
@@ -30,9 +39,6 @@
     border-radius: var(--br-md);
     border: none;
     background-color: #6e6;
-    position: absolute;
-    bottom: 25px;
-    right: 150px;
 }
 .btn_update{
     width: 40px;
@@ -40,9 +46,6 @@
     border-radius: var(--br-md);
     border: none;
     background-color: var(--blue-bg);
-    position: absolute;
-    bottom: 25px;
-    right: 90px;
 }
 .btn_delete{
     width: 40px;
@@ -50,7 +53,34 @@
     border-radius: 8px;
     border: none;
     background-color: #f66;
+}
+.div_buttons_div{
+    background-color: transparent;
+    width: min-content;
+    border: none;
+    outline: none;
     position: absolute;
-    bottom: 25px;
-    right: 28px;
+    right: 0;
+    padding: 5px;
+}
+.buttons_div{
+    width: min-content;
+    display: none;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.buttons_div button{
+    margin: 5px;
+}
+.p3{
+    font-size: .7rem;
+    opacity: 0.5;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
 }

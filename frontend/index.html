@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="header" id="header">
+    <header class="header flex " id="header">
       <a href="#welcome_section"><h2 class="header_title">NOTE</h2></a>
-      <ul class="header_ul">
+      <ul class="header_ul flex center">
         <li>
           <button onclick="location.href='#notes'" id="button_notelist">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
@@ -28,9 +28,9 @@
       </li>
       </ul>
     </header>
-    <section class="welcome_section" id="welcome_section">
-        <div class="welcome_container">
-            <div class="welcome_text_container">
+    <section class="welcome_section flex column" id="welcome_section">
+        <div class="welcome_container flex column center">
+            <div class="welcome_text_container flex column center">
               <p class="welcome_p welcome_title">BIENVENIDO!</p>
               <p class="welcome_description">
                Escriba, organice y acceda a sus notas sin complicaciones.<br>
@@ -39,9 +39,9 @@
           <button class="welcome_button" onclick="location.href='#main_section'">Empezar</button>
         </div>
       </section>
-      <main class="main_section" id="main_section">
-        <div class="main_wrapper">
-          <form id="form" class="main_form">
+      <main class="main_section flex column" id="main_section">
+        <div class="main_wrapper flex center column">
+          <form id="form" class="main_form flex column">
             <h2 class="main_form_title">Nueva nota</h2>
               <div class="main_input_container">
                 <h4 class="main_form_label">Nombre de la tarea:</h4>
@@ -64,7 +64,7 @@
         </div>
       </main>
     <section id="notes" class="section_notes">
-        <div class="notes-wrapper" id="notes-wrapper"></div>
+        <div class="notes-wrapper flex center" id="notes-wrapper"></div>
     </section>
     <script type="module" src="/src/js/main.js" defer></script>
   </body>

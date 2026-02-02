@@ -33,3 +33,16 @@ body{
     --text-dark-color: #252525;
     --transition: all .4s;
 }
+.flex{
+    display: flex;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.column{
+    flex-direction: column;
+}
+.aicenter{
+    align-items: center;
+}

@@ -1,20 +1,12 @@
 .main_section{
     flex: 1;
-    display: flex;
-    flex-direction: column;
 }
 .main_wrapper{
     height: 100dvh;
     background-color: var(--light-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px 0px 20px;
+    padding: 80px 20px 0 20px;
 }
 .main_form{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     width: 90%;
     background-color: var(--dark-bg);
@@ -49,11 +41,6 @@ textarea{
     border-radius: var(--br-sm);
     border: 2px solid #bbb;
 }
-input[type="checkbox"]{
-    width: 20px;
-    transform: scale(1.20);     
-    margin: var(--mg-lg);
-}
 .main_form > button{
     font-size: 1rem;
     font-weight: 600;
@@ -69,25 +56,19 @@ input:focus, textarea:focus{
     outline: none;
     border: 2px solid var(--blue-bg);
 }
-.modal_positive{
+.modal{
     width: fit-content;
     height: fit-content;
     padding: var(--pd-lg);
     border-radius: var(--br-md);
     color: #eaeaea;
-    background-color: #585;
     position: fixed;
     bottom: 50px;
     right: 20px;
 }
+.modal_positive{
+    background-color: #585;
+}
 .modal_negative{
-     width: fit-content;
-    height: fit-content;
-    padding: var(--pd-lg);
-    border-radius: var(--br-md);
-    color: #eaeaea;
     background-color: red;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
 }

@@ -4,7 +4,9 @@ export const deleteNote = async (id)=>{
     })
     if (!response.ok){
         throw new Error('Algo ha salido mal al intentar eliminar la nota.')
+        return false
     }else{
         console.log('Todo bien')
+        return true
     }
 }

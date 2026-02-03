@@ -7,6 +7,7 @@ export const createNote = (n)=>{
     /* Creacion del elemento Note con sus respectivos subelementos y clases.*/
     let div_note = createElement('div', ['div_notes', 'flex', 'column', 'aicenter'])
     let title_note = createElement('h2', ['title_note'])
+    let subtitle_note = createElement('h3', ['subtitle_note'])
     let description_note = createElement('p', ['description_note'])
     let checkbox_remember = createElement('input', ['input_note'])
     let remember_text = createElement('p', ['remember_text'])
@@ -19,6 +20,7 @@ export const createNote = (n)=>{
     let input_description = createElement('input', [])
     /* Asignacion de atributos */
     title_note.textContent = n.name
+    subtitle_note.textContent = 'Haga click para mas informacion.'
     description_note.textContent = n.description
     checkbox_remember.type = 'checkbox'
         if(n.remember == true){
@@ -32,24 +34,25 @@ export const createNote = (n)=>{
         btn_checked.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#252525"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>'
         /* Agrupacion*/ 
             div_buttons.append(btn_checked, btn_update, btn_delete)
-            div_note.append(title_note, description_note, checkbox_remember, remember_text, button_note_menu, div_buttons)
+            div_note.append(title_note, description_note, subtitle_note, checkbox_remember, remember_text, button_note_menu, div_buttons)
         /* Eventos */
         /* Despliegue de nota */
-        div_note.addEventListener('click', ()=>{
-                if(div_state == true){
-                    div_note.classList.toggle('open')
-                    div_state = false
-                }else if(div_state == false){
-                    div_note.classList.toggle('closed')
-                    div_state = true
-                }
+        div_note.addEventListener('dblclick', ()=>{
+                div_note.classList.toggle('closed')
+                subtitle_note.classList.toggle('transparent')
+                remember_text.classList.toggle('rt_left')
+                description_note.classList.toggle('appear')
             })
         /* Despliegue de botones */
-             button_note_menu.addEventListener('dblclick', ()=>{
+             button_note_menu.addEventListener('click', ()=>{
                 if(div_buttons.style.display != 'none'){
                     div_buttons.style.display = 'none'
                 }else if(div_buttons.style.display == 'none'){
-                    div_buttons.style.display = 'flex'
+                    if(div_note.offsetHeight <= 150){
+                        div_note.style.height = '180px'
+                        div_buttons.style.display = 'flex'
+                    }
+
                 }
             })
         /* Eliminacion de nota */

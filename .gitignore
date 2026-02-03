@@ -11,3 +11,4 @@ backend/tasks.json
 
 #
 node_modules/
+*db
